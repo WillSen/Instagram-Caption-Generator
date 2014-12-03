@@ -1,0 +1,171 @@
+<!doctype html>
+<html >
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div ng-app="myApp">
+
+    <div ng-controller="ExampleController">
+      <div class="row">
+        <h1>INSTAGRAM CAPTION GENERATOR</h1>
+      </div>
+
+      <form name="myForm">
+        <div class="row">
+          <h1>Where?</h1>
+        </div>
+<div class="form-group">
+        <div class="row">
+
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" name="beach" ng-model="formData.location" value="Beach" > <img src="img/beach.png">
+              </label>
+            </div>
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" ng-model="formData.location" value="Party"> <img src="img/club.png">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" ng-model="formData.location" value="mountains">  <img src="img/nature.png">
+              </label>
+            </div>
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" ng-model="formData.location" value="City">  <img src="img/city.png">
+              </label>
+            </div>  
+          </div>
+        </div>
+
+
+        <div class="row">
+          <h1>What?</h1>
+        </div>
+<div class="form-group">
+        <div class="row">
+
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" name="Workout" value="Workout" ng-model="formData.what" >  <img src="img/workout.png">
+
+              </label>
+            </div>
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" name="Yoga" value="Yoga" ng-model="formData.what" >  <img src="img/yoga.png">
+
+              </label>
+            </div>
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" name="Fashion" value="Fashion" ng-model="formData.what" >  <img src="img/fashion.png">
+
+              </label>
+            </div>
+            <div class="radio small-6 large-6 columns">
+              <label>
+                <input type="radio" name="Party" value="Party" ng-model="formData.what" >  <img src="img/party.png">
+
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <h1>Who?</h1>
+        </div>
+        <div class="form-group row">
+          <div class="radio small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Selfie" value="Selfie" ng-model="formData.who" >  <img src="img/selfie.png">
+              
+            </label>
+          </div>
+          <div class="radio small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Couple" value="Couple" ng-model="formData.who" > <img src="img/couple.png">
+              
+            </label>
+          </div>
+          <div class="radio small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Friends" value="Friends" ng-model="formData.who" > <img src="img/group.png">
+              
+            </label>
+          </div>
+          <div class="radio small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Nobody" value="Nobody" ng-model="formData.who" ><img src="img/nobody.png">
+              
+            </label>
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <h1>Weather?</h1>
+        </div>
+        <div class="form-group row">
+          <div class="radio  small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Dry" value="Dry" ng-model="formData.weather"><img src="img/dry.png">
+              
+            </label>
+          </div>
+          <div class="radio  small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Rain" value="Rain" ng-model="formData.weather"><img src="img/rain.png">
+              
+            </label>
+          </div>
+          <div class="radio  small-6 large-6 columns">
+            <label>
+              <input type="radio" name="Snow" value="Snow" ng-model="formData.weather"><img src="img/snow.png">
+              
+            </label>
+          </div>
+          <div class="radio  small-6 large-6 columns">
+            <label>
+              <input type="radio" name="inside" value="inside" ng-model="formData.weather"><img src="img/inside.png">
+              
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <h1>City?</h1>
+        </div>
+        <div class="form-group row">
+          <div class="input small-6 large-12 columns">
+            <label>
+              <input type="text" name="City" value="City" ng-model="formData.city" id="city" ngRequired="true">
+            </label>
+          </div>
+        </div>
+        <div class="row submitRow">
+        <input type="submit" id="submit" value="Submit" ng-click="submit(formData)" class="submit">
+        </div>
+        <div class="row results">
+          
+          <p class="results-text">
+              {{resultz}}
+            </p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

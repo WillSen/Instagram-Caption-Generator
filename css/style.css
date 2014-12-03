@@ -1,0 +1,65 @@
+
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden;
+  position: absolute;
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+
+  opacity: 0.8;
+
+  
+}
+
+img {
+
+  
+  padding-bottom: 70px
+}
+
+#city {
+  visibility: visible
+}
+
+.results, .submitRow {
+  margin: auto;
+  padding-top: 100px;
+}
+
+.columns {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.submit  {
+  width: 1050px;
+  height: 60px;
+  border: 0px;
+
+  vertical-align: middle;
+  font-size: 25px;
+  background: #5CBCF6;
+  color: white;
+}
+
+.results {
+  font-size: 40px !important;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.results-text {
+  font-size: 40px;
+}
