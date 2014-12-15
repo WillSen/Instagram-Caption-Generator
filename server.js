@@ -6,27 +6,27 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-mongoose.connect('localhost', 'simple')
+// mongoose.connect('localhost', 'simple')
 
-var personSchema = {
-  firstname: String,
-  lastname: String,
-  email: String
-}
+// var personSchema = {
+//   firstname: String,
+//   lastname: String,
+//   email: String
+// }
 
-var Person = mongoose.model('Person', personSchema, 'people')
+// var Person = mongoose.model('Person', personSchema, 'people')
 
-app.get('/users', function(req,res){
-  Person.find(function(err, doc){
-    doc.forEach(function(element){
-      console.log(element.get('firstName'))
-    })
-    // var x = doc[0].get('firstName')
-    // console.log(x)
-    // console.log(Object.keys(x))
-    res.send(200);
-  });
-});
+// app.get('/users', function(req,res){
+//   Person.find(function(err, doc){
+//     doc.forEach(function(element){
+//       console.log(element.get('firstName'))
+//     })
+//     // var x = doc[0].get('firstName')
+//     // console.log(x)
+//     // console.log(Object.keys(x))
+//     res.send(200);
+//   });
+// });
 
 // app.get('/', function(req, res){
 //   res.static(__dirname +'index.html');
