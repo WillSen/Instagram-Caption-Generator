@@ -22,7 +22,7 @@ app.controller('ExampleController',  function($scope) {
     } 
     else if (input.who == "Nobody") {
       who = ""
-    } 
+    }
 
 
     if (input.weather == "Dry") {
@@ -31,7 +31,7 @@ app.controller('ExampleController',  function($scope) {
     else if (input.weather == "Rain") {
       weather = " Someone found a puddle #rainyday "
     } 
-    else if (input.weather == "Rain") {
+    else if (input.weather == "Snow") {
       weather = " #snowyday #sweaterweather"
     } 
 
