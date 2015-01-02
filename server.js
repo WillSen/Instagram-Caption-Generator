@@ -1,42 +1,18 @@
 var express = require('express');
 var path = require('path');
-var mongoose = require('mongoose');
+var db = require('./modules/db')
+var logic = require('./modules/logic')
+// console.log(db)
+
+
 
 var app = express();
 app.set('port', (process.env.PORT || 5000));
 
-mongoose.connect('mongodb://admin:password@ds063140.mongolab.com:63140/willsentance');
 
-var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function(){
-  var phraseSchema = mongoose.Schema({
-    phrase: String,
-    category: String, 
-    option: String
-  })
-  var Phrase = mongoose.model('Phrase', phraseSchema);
-  var thepuddle = new Phrase({
-    phrase: 'The Someone found a puddle #rainyday', 
-    category: 'asd weather', 
-    option: 'a rain'
-  });
-  // console.log(puddle.phrase)
-
-  Phrase.find(function(err, phrases){
-    if (err) return console.error(err);
-    // console.log(phrases);
-  })
-
-  thepuddle.save(function(err, phrase){
-    if (err) return console.error(err);
-    // console.log(phrase);
-    
-  })  
-});
 
 app.get('/phrase', function(req, res){
+  logic(req.query);
   console.log('req.query', req.query)
 })
 

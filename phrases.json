@@ -1,0 +1,217 @@
+[
+  {
+    "phrase":"Someone found a puddle #rainyday",
+    "category":"weather",
+    "option":"rain"
+  },
+  {
+    "phrase":"#snowyday",
+    "category":"weather",
+    "option":"snow"
+  },
+  {
+    "phrase":"#sweaterweather",
+    "category":"weather",
+    "option":"snow"
+  },
+  {
+    "phrase":"#Sunkiss",
+    "category":"weather",
+    "option":"dry"
+  },
+  {
+    "phrase":"Sun Salutations",
+    "category":"weather",
+    "option":"dry"
+  },
+  {
+    "phrase":"Smug lil Thang",
+    "category":"who",
+    "option":"selfie"
+  },
+  {
+    "phrase":"w/ the bae",
+    "category":"who",
+    "option":"couple"
+  },
+  {
+    "phrase":"with my favorite people in the world",
+    "category":"who",
+    "option":"friends"
+  },
+  {
+    "phrase":"Downtime selfies",
+    "category":"who",
+    "option":"selfie"
+  },
+  {
+    "phrase":"Ending the day right",
+    "category":"time",
+    "option":"night"
+  },
+  {
+    "phrase":"Can you tell I'm happy my %day is over",
+    "category":"time",
+    "option":""
+  },
+  {
+    "phrase":"Live what you love",
+    "category":"quote",
+    "option":""
+  },
+  {
+    "phrase":"#yogaeverydamnday",
+    "category":"what",
+    "option":"yoga"
+  },
+  {
+    "phrase":"You are perfect because you're not",
+    "category":"quote",
+    "option":""
+  },
+  {
+    "phrase":"Be free. Let your main intention be to find freedom in everything you do.",
+    "category":"quote",
+    "option":""
+  },
+  {
+    "phrase":"Out shopping for my basic bitches",
+    "category":"what",
+    "option":"shopping"
+  },
+  {
+    "phrase":"I hope you all are having a good %day!",
+    "category":"day",
+    "option":""
+  },
+  {
+    "phrase":"lookin right thru ya",
+    "category":"who",
+    "option":"selfie"
+  },
+  {
+    "phrase":"%city as sweet as %city",
+    "category":"city",
+    "option":""
+  },
+  {
+    "phrase":"living it up in %city",
+    "category":"city",
+    "option":""
+  },
+  {
+    "phrase":"on that new flow",
+    "category":"what",
+    "option":"party"
+  },
+  {
+    "phrase":"No artist, living or dead, could capture this beauty on canvas.",
+    "category":"location",
+    "option":"mountains"
+  },
+  {
+    "phrase":"with my BFFs",
+    "category":"who",
+    "option":"friends"
+  },
+  {
+    "phrase":"with my BFF",
+    "category":"who",
+    "option":"couple"
+  },
+  {
+    "phrase":"Rare air",
+    "category":"location",
+    "option":"mountains"
+  },
+  {
+    "phrase":"The loveliest mornings",
+    "category":"time",
+    "option":"morning"
+  },
+  {
+    "phrase":"Double the trouble #monstergirls",
+    "category":"who",
+    "option":"friends"
+  },
+  {
+    "phrase":"Mommy loves you sweet pig.",
+    "category":"who",
+    "option":"pet"
+  },
+  {
+    "phrase":"With the gang in %location",
+    "category":"who",
+    "option":"friends"
+  },
+  {
+    "phrase":"#harder #better #faster #stronger",
+    "category":"what",
+    "option":"workout"
+  },
+  {
+    "phrase":"Snuck off to the west side for a wave and now I can't find my wallet.",
+    "category":"what",
+    "option":"beach"
+  },
+  {
+    "phrase":"I'll ride with you",
+    "category":"who",
+    "option":"couple"
+  },
+  {
+    "phrase":"Just another %day night in %location",
+    "category":"time",
+    "option":"night"
+  },
+  {
+    "phrase":"Step outside your comfort zone. Magic awaits you!",
+    "category":"quote",
+    "option":""
+  },
+  {
+    "phrase":"I'm no preacher, but love the life you live",
+    "category":"quote",
+    "option":""
+  },
+  {
+    "phrase":"paradise",
+    "category":"location",
+    "option":"beach"
+  },
+  {
+    "phrase":"twinning and we didn't even have to try",
+    "category":"who",
+    "option":"couple"
+  },
+  {
+    "phrase":"Yeezus walks",
+    "category":"who",
+    "option":"selfie"
+  },
+  {
+    "phrase":"above the clouds",
+    "category":"location",
+    "option":"beach"
+  },
+  {
+    "phrase":"a picture does not do this place justice.",
+    "category":"location",
+    "option":"beach"
+  },
+  {
+    "phrase":"happiest place on earth",
+    "category":"what",
+    "option":"party"
+  },
+  {
+    "phrase":"babes",
+    "category":"who",
+    "option":"friends"
+  },
+  {
+    "phrase":"blood, sweat, and only like one little tear.",
+    "category":"what",
+    "option":"workout"
+  }
+]
