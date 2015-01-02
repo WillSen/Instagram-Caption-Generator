@@ -1,6 +1,7 @@
 var db = require('./db')
 
 var logic = function(params){
+  var outputCaption = [];
 
   for (key in params){
     category = key.toLowerCase();
@@ -9,11 +10,18 @@ var logic = function(params){
     db.Phrase.find({ $and: [{category: category}, {option: option}]}, function(err, phrases){
       if (err) return console.error(err);
       var options = Object.keys(phrases).length
-      var idxOfOptionPicked = Math.floor(Math.random() * options) + 1
+      var idxOfOptionPicked = Math.floor(Math.random() * options)
+      outputCaption.push(phrases[idxOfOptionPicked].phrase);
+
       console.log(options, '***', idxOfOptionPicked, '***', phrases);
       console.log('================================');
+      console.log(phrases[idxOfOptionPicked])
+      console.log('================================');
+      console.log('output', outputCaption);
     })
   }
+  
+
 }
 
 // receive input paramaters
