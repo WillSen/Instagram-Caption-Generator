@@ -1,32 +1,19 @@
 var db = require('./db')
 
 var logic = function(params){
-  console.log('==params==', params)
-  console.log(db.Phrase)
-  db.Phrase.find({ $and: [{category: 'weather'}, {option: 'dry'}] }, function(err, phrases){
-        if (err) return console.error(err);
-        console.log(phrases);
-  })
-  // console.log(db)
+
   for (key in params){
-    console.log('***',key, params[key],'***')
     category = key.toLowerCase();
     option = params[key].toLowerCase();
     console.log('===', category, option)
     db.Phrase.find({ $and: [{category: category}, {option: option}]}, function(err, phrases){
       if (err) return console.error(err);
-      console.log(phrases);
+      var options = Object.keys(phrases).length
+      var idxOfOptionPicked = Math.floor(Math.random() * options) + 1
+      console.log(options, '***', idxOfOptionPicked, '***', phrases);
+      console.log('================================');
     })
   }
-  // db.once('open', function(){
-  //   console.log('connection opened')
-    
-  //   // console.log(params[key])
-    
-  //   // 
-  //   console.log('reached inside logic.js')
-    
-  // })  
 }
 
 // receive input paramaters
