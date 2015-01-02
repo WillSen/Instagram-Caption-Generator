@@ -2,12 +2,21 @@ var db = require('./db')
 
 var logic = function(params){
   console.log('==params==', params)
+  // console.log(db)
   db.once('open', function(){
+    console.log('connection opened')
+    
+    // console.log(params[key])
+    
+    // for (key in params){
+    //   console.log('***',key, params[key],'***')
+    //   db.Phrase.find({ $and: [{category: key}, {option: params[key]}] }, function(err, phrases){
+    //     if (err) return console.error(err);
+    //     console.log(phrases);
+    //   })
+    // }
     console.log('reached inside logic.js')
-    db.Phrase.find({ category: 'weather' }, function(err, phrases){
-      if (err) return console.error(err);
-      console.log(phrases);
-    })
+    
   })  
 }
 
