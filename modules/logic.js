@@ -1,7 +1,9 @@
 var db = require('./db')
 
 var logic = function(params){
-  var outputCaption = [];
+  var outputCaption = {
+    who: null, what: null, location: null, weather: null
+  };
 
   for (key in params){
     category = key.toLowerCase();
