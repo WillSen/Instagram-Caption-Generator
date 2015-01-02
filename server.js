@@ -3,7 +3,6 @@ var path = require('path');
 var mongoose = require('mongoose');
 
 var app = express();
-
 app.set('port', (process.env.PORT || 5000));
 
 mongoose.connect('mongodb://admin:password@ds063140.mongolab.com:63140/willsentance');
@@ -12,37 +11,34 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(){
-  // yay!
   var phraseSchema = mongoose.Schema({
     phrase: String,
     category: String, 
     option: String
   })
-  // phraseSchema.methods.speak = function(){
-  //   var greeting = this.name
-  //       ? "Meow name is " + this.name
-  //       : "I don't have a name"
-  //     console.log(greeting);
-  // }
   var Phrase = mongoose.model('Phrase', phraseSchema);
-  var puddle = new Phrase({
-    phrase: 'Someone found a puddle #rainyday', 
-    category: 'weather', 
-    option: 'rain'
+  var thepuddle = new Phrase({
+    phrase: 'The Someone found a puddle #rainyday', 
+    category: 'asd weather', 
+    option: 'a rain'
   });
   // console.log(puddle.phrase)
 
   Phrase.find(function(err, phrases){
     if (err) return console.error(err);
-    console.log(phrases);
+    // console.log(phrases);
   })
 
-  // puddle.save(function(err, phrase){
-  //   if (err) return console.error(err);
-  //   console.log(phrase);
+  thepuddle.save(function(err, phrase){
+    if (err) return console.error(err);
+    // console.log(phrase);
     
-  // })  
+  })  
 });
+
+app.get('/phrase', function(req, res){
+  console.log('req.query', req.query)
+})
 
 // var personSchema = {
 //   firstname: String,
@@ -98,7 +94,7 @@ db.once('open', function(){
 //   });
 // });
 
-app.use(express.static('./public')));
+app.use(express.static('./public'));
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));

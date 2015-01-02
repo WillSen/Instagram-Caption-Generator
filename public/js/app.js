@@ -1,13 +1,31 @@
 var app = angular.module('myApp', [])
 
-app.controller('ExampleController',  function($scope) {
+app.controller('ExampleController',  function($scope, $http) {
   
   $scope.formData = {};
-  $scope.resultz
+  $scope.results
   
+
 
   $scope.submit = function(input){
     var locationAndWhat, what, who, weather, city;
+
+    // $http.get("/phrase", { params: { user_id: "willsen" }}).success(function (data) {
+    //   console.log(data);
+    //   // $scope.A = data.username;
+    // });
+
+    $http({
+        method: "get",
+        url: "/phrase",
+        params: {
+            location: input.location,
+            what: input.what,
+            who: input.who,
+            weather: input.weather,
+            city: input.city
+        }
+    });
 
     locationAndWhat = "So loving the " +input.location +" and "+input.what+" right now."
 
@@ -41,8 +59,8 @@ app.controller('ExampleController',  function($scope) {
 
    
     
-    $scope.resultz = locationAndWhat + who + city + weather
-    console.log($scope.resultz)
+    $scope.results = locationAndWhat + who + city + weather
+    console.log($scope.results)
 
 
 
