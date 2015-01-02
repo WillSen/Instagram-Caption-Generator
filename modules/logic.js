@@ -13,8 +13,7 @@ var logic = function(params){
       if (err) return console.error(err);
       var options = Object.keys(phrases).length
       var idxOfOptionPicked = Math.floor(Math.random() * options)
-      outputCaption.push(phrases[idxOfOptionPicked].phrase);
-
+      outputCaption[phrases[idxOfOptionPicked].category] = outputCaption[phrases[idxOfOptionPicked].phrase]
       console.log(options, '***', idxOfOptionPicked, '***', phrases);
       console.log('================================');
       console.log(phrases[idxOfOptionPicked])
