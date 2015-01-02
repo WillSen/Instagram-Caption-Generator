@@ -5,6 +5,7 @@ var logic = function(params, callback){
     who: null, what: null, location: null, weather: null
   };
 
+  // wrap database querying in a callback
   for (key in params){
     category = key.toLowerCase();
     option = params[key].toLowerCase();
@@ -13,7 +14,7 @@ var logic = function(params, callback){
       if (err) return console.error(err);
       var options = Object.keys(phrases).length
       var idxOfOptionPicked = Math.floor(Math.random() * options)
-      outputCaption[phrases[idxOfOptionPicked].category] = outputCaption[phrases[idxOfOptionPicked].phrase]
+      outputCaption[phrases[idxOfOptionPicked].category] = phrases[idxOfOptionPicked].phrase
       console.log(options, '***', idxOfOptionPicked, '***', phrases);
       console.log('================================');
       console.log(phrases[idxOfOptionPicked])
