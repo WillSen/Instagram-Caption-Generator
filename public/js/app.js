@@ -26,43 +26,43 @@ app.controller('ExampleController',  function($scope, $http) {
             city: input.city
         }
     }).success(function(data){
-      console.log(data)
+      $scope.results = data;
     })
 
-    locationAndWhat = "So loving the " +input.location +" and "+input.what+" right now."
+    // locationAndWhat = "So loving the " +input.location +" and "+input.what+" right now."
 
-    if (input.who == "Selfie") {
-      who = " Smug lil Thang "
-    }
-    else if (input.who == "Couple") {
-      who = " w/ the bae "
-    } 
-    else if (input.who == "Friends") {
-      who = " with my favorite people in the world"
-    } 
-    else if (input.who == "Nobody") {
-      who = ""
-    }
+    // if (input.who == "Selfie") {
+    //   who = " Smug lil Thang "
+    // }
+    // else if (input.who == "Couple") {
+    //   who = " w/ the bae "
+    // } 
+    // else if (input.who == "Friends") {
+    //   who = " with my favorite people in the world"
+    // } 
+    // else if (input.who == "Nobody") {
+    //   who = ""
+    // }
 
 
-    if (input.weather == "Dry") {
-      weather = " #Sunkiss"
-    }
-    else if (input.weather == "Rain") {
-      weather = " Someone found a puddle #rainyday "
-    } 
-    else if (input.weather == "Snow") {
-      weather = " #snowyday #sweaterweather"
-    } 
+    // if (input.weather == "Dry") {
+    //   weather = " #Sunkiss"
+    // }
+    // else if (input.weather == "Rain") {
+    //   weather = " Someone found a puddle #rainyday "
+    // } 
+    // else if (input.weather == "Snow") {
+    //   weather = " #snowyday #sweaterweather"
+    // } 
 
-    if (input.city) {
-      city = "living it up in " + input.city;
-    };
+    // if (input.city) {
+    //   city = "living it up in " + input.city;
+    // };
 
    
     
-    $scope.results = locationAndWhat + who + city + weather
-    console.log($scope.results)
+    // $scope.results = locationAndWhat + who + city + weather
+    // console.log($scope.results)
 
 
 
