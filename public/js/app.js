@@ -4,17 +4,9 @@ app.controller('ExampleController',  function($scope, $http) {
   
   $scope.formData = {};
   $scope.results
-  
-
 
   $scope.submit = function(input){
     var locationAndWhat, what, who, weather, city;
-
-    // $http.get("/phrase", { params: { user_id: "willsen" }}).success(function (data) {
-    //   console.log(data);
-    //   // $scope.A = data.username;
-    // });
-
     $http({
         method: "get",
         url: "/phrase",
