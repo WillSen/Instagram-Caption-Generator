@@ -1,14 +1,9 @@
 var express = require('express');
 var db = require('./modules/db')
 var logic = require('./modules/logic')
-// console.log(db)
-
-
 
 var app = express();
 app.set('port', (process.env.PORT || 5000));
-
-
 
 app.get('/phrase', function(req, res){
   logic(req.query, function(outputSentence){
