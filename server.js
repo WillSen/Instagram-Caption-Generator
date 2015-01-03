@@ -11,7 +11,21 @@ app.set('port', (process.env.PORT || 5000));
 
 
 app.get('/phrase', function(req, res){
-  logic(req.query);
+  logic(req.query, function(input){
+    var flag = true
+    for (key in input){
+      if (input[key] === null){
+        console.log('Incomplete')
+        var flag = false;
+      }
+    }
+    if (flag === true) {
+      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+      console.log(input);
+      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    };
+    if (input) {};
+  });
   console.log('req.query', req.query)
 })
 
