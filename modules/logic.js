@@ -29,6 +29,7 @@ var databaseQuery = function(params, callback){
 var createSentence = function(params){
   databaseQuery(params, function(input){
     var flag = true
+    var outputSentence = ""
     for (key in input){
       if (input[key] === null){
         console.log('Incomplete')
@@ -36,6 +37,8 @@ var createSentence = function(params){
       }
     }
     if (flag === true) {
+      var order = [who, what, location, weather]
+      
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
       console.log(input);
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
