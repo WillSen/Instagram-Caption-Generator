@@ -25,7 +25,9 @@ app.controller('ExampleController',  function($scope, $http) {
             weather: input.weather,
             city: input.city
         }
-    });
+    }).success(function(data){
+      console.log(data)
+    })
 
     locationAndWhat = "So loving the " +input.location +" and "+input.what+" right now."
 
