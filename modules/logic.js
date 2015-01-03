@@ -26,7 +26,7 @@ var databaseQuery = function(params, callback){
   }
 }
 
-var createSentence = function(params){
+var createSentence = function(params, callback){
   databaseQuery(params, function(input){
     var flag = true
     var outputSentence = ""
@@ -41,13 +41,14 @@ var createSentence = function(params){
       for (var i = 0; i < order.length; i++) {
         console.log('input[order[i]]', input[order[i]])
         outputSentence += input[order[i]] + " "
-        console.log(outputSentence)
+        
       };
+      callback(outputSentence)
+      console.log(outputSentence)
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
       console.log(input);
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     };
-    if (input) {};
   });
 }
 
