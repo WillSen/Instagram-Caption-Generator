@@ -26,7 +26,6 @@ app.get('/phrase', function(req, res){
     };
     if (input) {};
   });
-  console.log('req.query', req.query)
 })
 
 
