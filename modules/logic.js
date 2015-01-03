@@ -1,6 +1,6 @@
 var db = require('./db')
 
-var logic = function(params, callback){
+var databaseQuery = function(params, callback){
   var outputCaption = {
     who: null, what: null, location: null, weather: null
   };
@@ -26,4 +26,8 @@ var logic = function(params, callback){
   }
 }
 
-module.exports = logic;
+var formSentence = function(){
+  
+}
+
+module.exports = databaseQuery;
