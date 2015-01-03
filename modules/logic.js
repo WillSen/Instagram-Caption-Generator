@@ -16,11 +16,6 @@ var databaseQuery = function(params, callback){
         var options = Object.keys(phrases).length
         var idxOfOptionPicked = Math.floor(Math.random() * options)
         outputCaption[phrases[idxOfOptionPicked].category] = phrases[idxOfOptionPicked].phrase
-        console.log(options, '***', idxOfOptionPicked, '***', phrases);
-        console.log('================================');
-        console.log(phrases[idxOfOptionPicked])
-        console.log('================================');
-        console.log('output', outputCaption);
         callback(outputCaption)
     })
   }
@@ -44,10 +39,6 @@ var createSentence = function(params, callback){
         
       };
       callback(outputSentence)
-      console.log(outputSentence)
-      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-      console.log(input);
-      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     };
   });
 }
