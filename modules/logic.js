@@ -37,8 +37,12 @@ var createSentence = function(params){
       }
     }
     if (flag === true) {
-      var order = [who, what, location, weather]
-      
+      var order = ['who', 'what', 'location', 'weather']
+      for (var i = 0; i < order.length; i++) {
+        console.log('input[order[i]]', input[order[i]])
+        outputSentence += input[order[i]] + " "
+        console.log(outputSentence)
+      };
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
       console.log(input);
       console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
