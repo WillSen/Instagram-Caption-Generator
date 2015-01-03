@@ -26,8 +26,22 @@ var databaseQuery = function(params, callback){
   }
 }
 
-var formSentence = function(){
-  
+var createSentence = function(params){
+  databaseQuery(params, function(input){
+    var flag = true
+    for (key in input){
+      if (input[key] === null){
+        console.log('Incomplete')
+        var flag = false;
+      }
+    }
+    if (flag === true) {
+      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+      console.log(input);
+      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    };
+    if (input) {};
+  });
 }
 
-module.exports = databaseQuery;
+module.exports = createSentence;
